@@ -16,6 +16,8 @@
 		8FAAE3092886115E0088DB41 /* Forget_Me_Not_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAE3082886115E0088DB41 /* Forget_Me_Not_2Tests.swift */; };
 		8FAAE3132886115E0088DB41 /* Forget_Me_Not_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAE3122886115E0088DB41 /* Forget_Me_Not_2UITests.swift */; };
 		8FAAE3152886115E0088DB41 /* Forget_Me_Not_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAE3142886115E0088DB41 /* Forget_Me_Not_2UITestsLaunchTests.swift */; };
+		8FB91AB52899CDB700E36E8D /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB91AB42899CDB700E36E8D /* LocationVC.swift */; };
+		8FC5982B288926E8003932E4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5982A288926E8003932E4 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8FAAE30E2886115E0088DB41 /* Forget Me Not 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Forget Me Not 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAAE3122886115E0088DB41 /* Forget_Me_Not_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forget_Me_Not_2UITests.swift; sourceTree = "<group>"; };
 		8FAAE3142886115E0088DB41 /* Forget_Me_Not_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forget_Me_Not_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FB91AB42899CDB700E36E8D /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		8FC5982A288926E8003932E4 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,11 @@
 				8FAAE2F32886115C0088DB41 /* SceneDelegate.swift */,
 				8FAAE2F52886115C0088DB41 /* ViewController.swift */,
 				8FAAE2F72886115C0088DB41 /* Main.storyboard */,
+				8FB91AB42899CDB700E36E8D /* LocationVC.swift */,
 				8FAAE2FA2886115E0088DB41 /* Assets.xcassets */,
 				8FAAE2FC2886115E0088DB41 /* LaunchScreen.storyboard */,
 				8FAAE2FF2886115E0088DB41 /* Info.plist */,
+				8FC5982A288926E8003932E4 /* AddViewController.swift */,
 			);
 			path = "Forget Me Not 2";
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB91AB52899CDB700E36E8D /* LocationVC.swift in Sources */,
 				8FAAE2F62886115C0088DB41 /* ViewController.swift in Sources */,
 				8FAAE2F22886115C0088DB41 /* AppDelegate.swift in Sources */,
+				8FC5982B288926E8003932E4 /* AddViewController.swift in Sources */,
 				8FAAE2F42886115C0088DB41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,11 +445,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMAGQ5H7TS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Forget Me Not 2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,11 +474,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMAGQ5H7TS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Forget Me Not 2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
