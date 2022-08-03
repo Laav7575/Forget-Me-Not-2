@@ -14,6 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
     @IBOutlet var table: UITableView!
     
     var models = [Reminders] ()
+    var models2 = [RemindersL] ()
     
     let locationManager:CLLocationManager = CLLocationManager()
     
@@ -26,7 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         locationManager.stopUpdatingLocation()
         locationManager.distanceFilter = 100
         // Do any additional setup after loading the view.
-        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: CLLocationCoordinate2DMake(43.61871, -122.406417), radius: 100, identifier: "You're home. Take you medication")
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: CLLocationCoordinate2DMake(43.61871, -122.406417), radius: 100, identifier: "home")
         locationManager.startMonitoring(for: geoFenceRegion)
     }
 
@@ -65,12 +66,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "add") as? LocationVC else {return}
         vc.title = "New Reminder"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completionL = {title, body, alt, long in
+        vc.completionL = {title, body, lName in
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
-                let date = Date()
-                let new = Reminders(title: title, date: date, identifier: "id_\(title)")
-                self.models.append(new)
+                //let date = Date()
+                let new = RemindersL(title: title, locationName: lName, identifier: "add")
+                self.models2.append(new)
                 self.table.reloadData()
                 
                 let content = UNMutableNotificationContent()
@@ -78,13 +79,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
                 content.sound = .default
                 content.body = body
                 
-                let targetDate = date
-                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
+                //let targetDate = date
+                let trigger = UNLocationNotificationTrigger(region: CLCircularRegion(center: CLLocationCoordinate2DMake(43.61871, -122.406417), radius: 100, identifier: "You're home. Take you medication"), repeats: false)
                 let request = UNNotificationRequest(identifier: "somelongid", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request)
             }
         }
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, title: String, locationName: String) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = models[indexPath.row].title
+        
+        
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = locationName
+        return cell
     }
     
     @IBAction func dipTapTest() {
@@ -172,10 +183,10 @@ func postLocalNotifications(eventTitle:String){
         
         let content = UNMutableNotificationContent()
         content.title = eventTitle
-        content.body = "You've entered a new region"
+        content.body = "Take your medication."
     content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
         
         let notificationRequest:UNNotificationRequest = UNNotificationRequest(identifier: "Region", content: content, trigger: trigger)
         
@@ -198,7 +209,6 @@ struct Reminders {
 }
 struct RemindersL {
     let title: String
-    let locationAlt: Int
-    let locationLat: Int
+    let locationName: String
     let identifier: String
 }

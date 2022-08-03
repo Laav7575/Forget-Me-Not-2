@@ -224,6 +224,7 @@
                         <outlet property="altField" destination="vyP-s0-vZg" id="jFN-C0-IgP"/>
                         <outlet property="bodyField" destination="Kf5-zD-HsF" id="ejP-g7-5FQ"/>
                         <outlet property="longField" destination="MTR-cs-rQm" id="Skq-Fp-7O1"/>
+                        <outlet property="nameField" destination="cac-t8-2Mz" id="XVE-qY-LEz"/>
                         <outlet property="titleField" destination="Ie0-lo-uSz" id="B7V-HX-jqw"/>
                     </connections>
                 </viewController>

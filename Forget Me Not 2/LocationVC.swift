@@ -13,8 +13,9 @@ class LocationVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     @IBOutlet var bodyField: UITextField!
     @IBOutlet var altField: UITextField!
     @IBOutlet var longField: UITextField!
+    @IBOutlet var nameField: UITextField!
     
-    public var completionL: ((String, String, Int, Int) -> Void)?
+    public var completionL: ((String, String, String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +23,18 @@ class LocationVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         bodyField.delegate = self
         altField.delegate = self
         longField.delegate = self
+        nameField.delegate = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSaveButton))
     }
     @objc func didTapSaveButton() {
         if let titleText = titleField.text, !titleText.isEmpty,
            let bodyText = bodyField.text, !bodyText.isEmpty,
             let altText = altField.text, !altText.isEmpty,
-           let longText = longField.text, !longText.isEmpty {
-            let altInt = Int(altText) ?? 0
-            let longInt = Int(longText) ?? 0
-            completionL?(titleText, bodyText, altInt, longInt)
+           let longText = longField.text, !longText.isEmpty,
+           let lName = nameField.text, !lName.isEmpty {
+            //let altInt = Int(altText) ?? 0
+            //let longInt = Int(longText) ?? 0
+            completionL?(titleText, bodyText, lName)
         }
     }
     
