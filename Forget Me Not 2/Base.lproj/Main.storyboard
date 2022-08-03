@@ -67,8 +67,8 @@
                         <rightBarButtonItems>
                             <barButtonItem style="plain" systemItem="compose" id="5u7-xa-cKq">
                                 <connections>
-                                    <action selector="dipTapLocation" destination="BYZ-38-t0r" id="dTN-Te-Jl1"/>
-                                    <segue destination="CEd-7C-uDf" kind="show" id="bas-Qb-4Ej"/>
+                                    <action selector="dipTapLocation" destination="BYZ-38-t0r" id="flj-BO-2b8"/>
+                                    <segue destination="CEd-7C-uDf" kind="show" id="jG0-D8-Ixq"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" systemItem="add" id="5EU-C5-Ek6">
@@ -96,6 +96,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Body..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QxK-qu-GPB">
                                 <rect key="frame" x="10" y="126" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7ss-Fg-24g"/>
                                 </constraints>
@@ -104,6 +105,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-eO-jRW">
                                 <rect key="frame" x="10" y="54" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94573602019439429" green="0.97298258543014526" blue="0.84406122878495837" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="RUa-VB-WPH"/>
                                 </constraints>
@@ -148,8 +150,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-lo-uSz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" background="Enter Body..." translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-lo-uSz">
                                 <rect key="frame" x="10" y="160" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="394" id="GD0-Qy-nxq"/>
                                     <constraint firstAttribute="height" constant="52" id="Kl1-Nf-zZV"/>
@@ -157,29 +160,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-zD-HsF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Body..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-zD-HsF">
                                 <rect key="frame" x="10" y="220" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="394" id="0oO-xE-1qe"/>
                                     <constraint firstAttribute="height" constant="52" id="rX1-UG-FGB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-s0-vZg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location Latitude..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-s0-vZg">
                                 <rect key="frame" x="10" y="280" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="L4V-rU-X5Y"/>
-                                    <constraint firstAttribute="width" constant="394" id="Shz-cO-HdU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-cs-rQm">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location Longitude..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-cs-rQm">
                                 <rect key="frame" x="10" y="340" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="394" id="LRB-7s-DxD"/>
                                     <constraint firstAttribute="height" constant="52" id="WWi-8M-5ZO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cac-t8-2Mz">
+                                <rect key="frame" x="10" y="400" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.94901961089999998" green="0.97254908080000002" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="394" id="E6P-zp-1j6"/>
+                                    <constraint firstAttribute="height" constant="52" id="VUZ-Az-5NF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="ndv-0y-2tW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -198,6 +212,8 @@
                             <constraint firstItem="MBf-eh-iDi" firstAttribute="trailing" secondItem="Kf5-zD-HsF" secondAttribute="trailing" constant="10" id="cie-T1-B8k"/>
                             <constraint firstItem="MBf-eh-iDi" firstAttribute="trailing" secondItem="MTR-cs-rQm" secondAttribute="trailing" constant="10" id="d39-7i-6Ji"/>
                             <constraint firstItem="Kf5-zD-HsF" firstAttribute="top" secondItem="Ie0-lo-uSz" secondAttribute="bottom" constant="8" symbolic="YES" id="dNt-vT-5Ay"/>
+                            <constraint firstItem="cac-t8-2Mz" firstAttribute="leading" secondItem="MTR-cs-rQm" secondAttribute="leading" id="fpW-ha-JAU"/>
+                            <constraint firstItem="cac-t8-2Mz" firstAttribute="top" secondItem="MTR-cs-rQm" secondAttribute="bottom" constant="8" symbolic="YES" id="pMd-5c-RJR"/>
                             <constraint firstItem="vyP-s0-vZg" firstAttribute="leading" secondItem="MBf-eh-iDi" secondAttribute="leading" constant="10" id="sy9-k5-uq3"/>
                             <constraint firstItem="MBf-eh-iDi" firstAttribute="trailing" secondItem="Ie0-lo-uSz" secondAttribute="trailing" constant="10" id="zCD-jF-3e9"/>
                             <constraint firstItem="vyP-s0-vZg" firstAttribute="top" secondItem="Kf5-zD-HsF" secondAttribute="bottom" constant="8" symbolic="YES" id="zRb-y8-7br"/>
@@ -241,6 +257,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Enter Body..." width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

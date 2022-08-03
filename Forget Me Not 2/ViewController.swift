@@ -61,7 +61,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
     
     @IBAction func dipTapLocation() {
         //show add vc
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "add") as? LocationVC else { return}
+        //guard let vc = storyboard?.instantiateViewController(withIdentifier: "add") as? LocationVC else { return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "add") as? LocationVC else {return}
         vc.title = "New Reminder"
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completionL = {title, body, alt, long in
@@ -193,5 +194,11 @@ func postLocalNotifications(eventTitle:String){
 struct Reminders {
     let title: String
     let date: Date
+    let identifier: String
+}
+struct RemindersL {
+    let title: String
+    let locationAlt: Int
+    let locationLat: Int
     let identifier: String
 }
